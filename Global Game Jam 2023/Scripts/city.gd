@@ -24,8 +24,13 @@ func anims():
 		$Sprite.frame = 0
 
 func selection():
-	if mouse_hover and Input.is_action_just_pressed("select_city"):
-		selected = true
+	if selected == false:
+		if mouse_hover and Input.is_action_just_pressed("select_city"):
+			selected = true
+	else:
+		if mouse_hover and Input.is_action_just_pressed("select_city"):
+			selected = false
+	
 	if !mouse_hover and Input.is_action_just_pressed("select_city"):
 		selected = false
 
