@@ -24,6 +24,7 @@ z_index = -3
 texture = ExtResource( 3 )
 
 [node name="WaterBackground" type="Control" parent="map"]
+visible = false
 show_behind_parent = true
 margin_left = -160.0
 margin_top = -90.0

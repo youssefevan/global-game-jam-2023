@@ -13,3 +13,6 @@ position = Vector2( 100, 92 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 44 )
+
+[connection signal="new_city_selected" from="City" to="Player" method="_on_City_new_city_selected"]
+[connection signal="new_city_selected" from="City2" to="Player" method="_on_City2_new_city_selected"]
