@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=3]
 
 [node name="TestingGrounds" type="Node2D"]
 
@@ -27,6 +28,10 @@ number = 3
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 44 )
 starting_city_node = NodePath("../City")
+
+[node name="GUI" parent="." instance=ExtResource( 3 )]
+margin_left = 260.0
+margin_right = 320.0
 
 [connection signal="new_target_city" from="City" to="Player" method="_on_City_new_target_city"]
 [connection signal="new_target_city" from="City2" to="Player" method="_on_City2_new_target_city"]
