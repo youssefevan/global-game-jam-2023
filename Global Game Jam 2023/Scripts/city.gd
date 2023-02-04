@@ -1,9 +1,10 @@
 extends Area2D
 class_name City
 
-signal new_city_selected()
+signal new_target_city()
 
 # variables
+export var number := 0
 export var city_name : String
 export var has_market := false
 
@@ -41,5 +42,8 @@ func _physics_process(delta):
 	selection()
 	
 	if selected and Global.arrived:
-		Global.target_city = self
-		emit_signal("new_city_selected")
+		Global.selected_city = self
+		
+		if number == Global.current_city.number + 1:
+			Global.target_city = self
+			emit_signal("new_target_city")

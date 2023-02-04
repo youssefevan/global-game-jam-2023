@@ -1,16 +1,24 @@
 extends KinematicBody2D
 
+export var starting_city_node: NodePath
+onready var starting_city : City = get_node(starting_city_node)
+
 var call_tween := true
 var travel_time := 0.0
+
+func _ready():
+	self.global_position = starting_city.global_position
+	Global.current_city = starting_city
 
 func _physics_process(delta):
 	if Global.target_city != null:
 		if self.global_position == Global.target_city.global_position:
 			Global.arrived = true
+			Global.current_city = Global.target_city
 		else:
 			Global.arrived = false
 	
-	if Global.arrived == true:
+	if Global.arrived:
 		call_tween = true
 
 func move():
@@ -20,11 +28,5 @@ func move():
 		tween.tween_property(self, "global_position", Global.target_city.global_position, travel_time)
 		call_tween = false
 
-func _on_City_new_city_selected():
-		move()
-
-func _on_City2_new_city_selected():
-		move()
-
-func _on_City3_new_city_selected():
-		move()
+func _on_City_new_target_city():
+	move()
