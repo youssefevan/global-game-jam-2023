@@ -1,0 +1,7 @@
+[gd_resource type="NoiseTexture" format=2]
+
+[resource]
+width = 256
+height = 256
+seamless = true
+bump_strength = 0.0
