@@ -281,14 +281,35 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/WATER_COL = Color( 0.04, 0.38, 0.88, 1 )
-shader_param/WATER2_COL = Color( 0.04, 0.35, 0.78, 1 )
-shader_param/FOAM_COL = Color( 0.654902, 0.670588, 0.701961, 1 )
+shader_param/WATER_COL = Color( 0.0392157, 0.596078, 0.780392, 1 )
+shader_param/WATER2_COL = Color( 0.0392157, 0.596078, 0.780392, 1 )
+shader_param/FOAM_COL = Color( 0.8125, 0.9609, 0.9648, 1 )
 shader_param/distortion_speed = 2.0
-shader_param/tile = Vector2( 180, 180 )
+shader_param/tile = Vector2( 128, 100 )
 shader_param/wave_speed = 1.5
 
 [node name="World" type="Node2D"]
+
+[node name="map" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( 1, 1 )
+z_index = -3
+texture = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="map"]
+show_behind_parent = true
+margin_left = -160.0
+margin_top = -90.0
+margin_right = 160.0
+margin_bottom = 90.0
+
+[node name="ColorRect" type="ColorRect" parent="map/Control"]
+material = SubResource( 2 )
+margin_right = 320.0
+margin_bottom = 181.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Manhattan" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 32 )
@@ -301,24 +322,3 @@ city_name = "Boston"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 32 )
-
-[node name="map" type="Sprite" parent="."]
-position = Vector2( 160, 88 )
-scale = Vector2( 1, 1.01389 )
-z_index = -3
-texture = ExtResource( 3 )
-
-[node name="Control" type="Control" parent="map"]
-show_behind_parent = true
-margin_left = -239.0
-margin_top = 58.0
-margin_right = 81.0
-margin_bottom = 238.0
-
-[node name="ColorRect" type="ColorRect" parent="map/Control"]
-material = SubResource( 2 )
-margin_right = 320.0
-margin_bottom = 181.0
-__meta__ = {
-"_edit_lock_": true
-}
