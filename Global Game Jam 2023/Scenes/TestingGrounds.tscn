@@ -11,8 +11,12 @@ position = Vector2( 240, 44 )
 [node name="City2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 100, 92 )
 
+[node name="City3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 124 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 44 )
 
 [connection signal="new_city_selected" from="City" to="Player" method="_on_City_new_city_selected"]
 [connection signal="new_city_selected" from="City2" to="Player" method="_on_City2_new_city_selected"]
+[connection signal="new_city_selected" from="City3" to="Player" method="_on_City3_new_city_selected"]

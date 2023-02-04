@@ -40,6 +40,6 @@ func _physics_process(delta):
 	anims()
 	selection()
 	
-	if selected:
+	if selected and Global.arrived:
 		Global.target_city = self
 		emit_signal("new_city_selected")
