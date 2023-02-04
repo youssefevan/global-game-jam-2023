@@ -30,3 +30,15 @@ func move():
 
 func _on_City_new_target_city():
 	move()
+
+func _on_City2_new_target_city():
+	move()
+
+func _on_City3_new_target_city():
+	move()
+
+func _on_City4_new_target_city():
+	move()
+
+func _on_City5_new_target_city():
+	move()

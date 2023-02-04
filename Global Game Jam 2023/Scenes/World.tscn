@@ -53,3 +53,5 @@ city_name = "Boston"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 32 )
+
+[connection signal="new_target_city" from="Manhattan" to="Player" method="_on_Manhattan_new_target_city"]
