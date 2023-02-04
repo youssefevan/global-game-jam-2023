@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="Manhattan" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 32 )
+city_name = "Manhattan"
+has_market = true
+
+[node name="Boston" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128, 64 )
+city_name = "Boston"
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 32, 32 )
