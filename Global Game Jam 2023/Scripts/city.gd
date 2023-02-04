@@ -24,7 +24,7 @@ func anims():
 		$Sprite.frame = 0
 
 func selection():
-	if selected == false:
+	if !selected:
 		if mouse_hover and Input.is_action_just_pressed("select_city"):
 			selected = true
 	else:
@@ -37,3 +37,6 @@ func selection():
 func _physics_process(delta):
 	anims()
 	selection()
+	
+	if selected:
+		Global.target_city = self

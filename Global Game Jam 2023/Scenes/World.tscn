@@ -11,7 +11,7 @@ city_name = "Manhattan"
 has_market = true
 
 [node name="Boston" parent="." instance=ExtResource( 1 )]
-position = Vector2( 128, 64 )
+position = Vector2( 256, 64 )
 city_name = "Boston"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
