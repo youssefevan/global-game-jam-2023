@@ -7,6 +7,17 @@
 
 [node name="TestingGrounds" type="Node2D"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = -64.0
+margin_top = 5.0
+margin_right = 12.0
+margin_bottom = 19.0
+
+[node name="Encounter" parent="CanvasLayer" instance=ExtResource( 4 )]
+visible = false
+
 [node name="City" parent="." instance=ExtResource( 1 )]
 position = Vector2( 32, 64 )
 
@@ -29,15 +40,6 @@ number = 3
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 44 )
 starting_city_node = NodePath("../City")
-
-[node name="Encounter" parent="." instance=ExtResource( 4 )]
-visible = false
-
-[node name="GUI" parent="." instance=ExtResource( 3 )]
-margin_left = 256.0
-margin_top = 5.0
-margin_right = 332.0
-margin_bottom = 19.0
 
 [connection signal="new_target_city" from="City" to="Player" method="_on_City_new_target_city"]
 [connection signal="new_target_city" from="City2" to="Player" method="_on_City2_new_target_city"]
