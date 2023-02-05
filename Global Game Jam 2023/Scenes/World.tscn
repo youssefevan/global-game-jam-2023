@@ -1,28 +1,48 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/mapbkrng.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Encounter.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="Encounter" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
+
 [node name="map" type="Sprite" parent="."]
-position = Vector2( 400, 225 )
-scale = Vector2( 2.5, 2.5 )
+position = Vector2( 320, 180 )
+scale = Vector2( 2, 2 )
 z_index = -3
 texture = ExtResource( 3 )
 
-[node name="Manhattan" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32, 32 )
-city_name = "Manhattan"
-has_market = true
+[node name="Seattle" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 32 )
 
-[node name="Boston" parent="." instance=ExtResource( 1 )]
-position = Vector2( 256, 64 )
+[node name="Portland" parent="." instance=ExtResource( 1 )]
+position = Vector2( 44, 64 )
 number = 1
-city_name = "Boston"
+
+[node name="SanFrancisco" parent="." instance=ExtResource( 1 )]
+position = Vector2( 36, 156 )
+number = 2
+
+[node name="LosAngeles" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, 196 )
+number = 3
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-starting_city_node = NodePath("../Manhattan")
+__meta__ = {
+"_edit_lock_": true
+}
+starting_city_node = NodePath("../Seattle")
 
-[connection signal="new_target_city" from="Manhattan" to="Player" method="_on_Manhattan_new_target_city"]
+[connection signal="new_target_city" from="Seattle" to="Player" method="_on_Seattle_new_target_city"]
+[connection signal="new_target_city" from="Portland" to="Player" method="_on_Portland_new_target_city"]
+[connection signal="new_target_city" from="SanFrancisco" to="Player" method="_on_SanFrancisco_new_target_city"]
+[connection signal="new_target_city" from="LosAngeles" to="Player" method="_on_LosAngeles_new_target_city"]
