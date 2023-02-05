@@ -54,3 +54,6 @@ func _on_City4_new_target_city():
 
 func _on_City5_new_target_city():
 	move()
+
+func _on_City6_new_target_city():
+	move()
