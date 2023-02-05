@@ -1,10 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/window.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/window2hover.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/window2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Fonts/PixelEmulator-xq08.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sprites/window2click.png" type="Texture" id=5]
 
 [sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 4 )
 
 [node name="Encounter" type="Node2D"]
 
@@ -28,4 +34,13 @@ margin_right = 152.0
 margin_bottom = 136.0
 theme = SubResource( 1 )
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_left = 10.0
+margin_top = 6.0
+margin_right = 54.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 2 )
+text = "gwar"
