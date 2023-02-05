@@ -6,20 +6,20 @@ var extra_health := false
 
 func _ready():
 	Global.spare_tire = false
-	Global.money = 8
+	Global.money = 3
 	Global.fuel = 3
 	Global.food = 3
 	Global.health = 3
 
-func _on_TireBox_toggled(button_pressed):
-	if Global.spare_tire == false:
-		Global.money -= 300
-		Global.spare_tire = true
-		#print(Global.spare_tire)
-	elif Global.spare_tire == true:
-		Global.money += 300
-		Global.spare_tire = false
-		#print(Global.spare_tire)
+#func _on_TireBox_toggled(button_pressed):
+#	if Global.spare_tire == false:
+#		Global.money -= 300
+#		Global.spare_tire = true
+#		#print(Global.spare_tire)
+#	elif Global.spare_tire == true:
+#		Global.money += 300
+#		Global.spare_tire = false
+#		#print(Global.spare_tire)
 
 func _on_FuelBox_toggled(button_pressed):
 	if extra_fuel == false:
