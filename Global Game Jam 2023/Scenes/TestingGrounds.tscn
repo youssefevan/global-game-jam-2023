@@ -37,6 +37,10 @@ number = 2
 position = Vector2( 224, 64 )
 number = 3
 
+[node name="City6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, 64 )
+number = 4
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 44 )
 starting_city_node = NodePath("../City")
@@ -46,3 +50,4 @@ starting_city_node = NodePath("../City")
 [connection signal="new_target_city" from="City3" to="Player" method="_on_City3_new_target_city"]
 [connection signal="new_target_city" from="City4" to="Player" method="_on_City4_new_target_city"]
 [connection signal="new_target_city" from="City5" to="Player" method="_on_City5_new_target_city"]
+[connection signal="new_target_city" from="City6" to="Player" method="_on_City6_new_target_city"]

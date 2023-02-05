@@ -12,16 +12,20 @@ var refuel := 1
 var arrived := true
 
 #Counters
-var health = 0
-var fuel = 0
+var health = 3
+var fuel = 3
 var food = 0
-var money = 0
+var money = 8
 
 var spare_tire := false
 
 var random = RandomNumberGenerator.new()
 
 onready var player : Player
+
+func _physics_process(delta):
+	if health == 0 || fuel == 0:
+		get_tree().change_scene("res://Scenes/GameOver.tscn")
 
 func get_encounter():
 	random.randomize()
