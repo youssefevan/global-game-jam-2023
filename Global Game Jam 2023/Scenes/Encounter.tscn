@@ -16,3 +16,9 @@ color = Color( 0, 0, 0, 0.356863 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Button" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 104.0
+margin_right = 136.0
+margin_bottom = 124.0
