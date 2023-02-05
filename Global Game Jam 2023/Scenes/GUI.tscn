@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Label.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/backgroundcounter.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/FuelCount.gd" type="Script" id=7]
 [ext_resource path="res://Sprites/fuelICON.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/moneyICON.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/money.gd" type="Script" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 6
@@ -66,7 +67,7 @@ margin_bottom = 11.0
 rect_min_size = Vector2( 16, 8 )
 custom_fonts/font = SubResource( 1 )
 align = 2
-script = ExtResource( 1 )
+script = ExtResource( 10 )
 
 [node name="MoneyIcon" type="TextureRect" parent="HBoxContainer/Money/Money"]
 anchor_bottom = 0.091

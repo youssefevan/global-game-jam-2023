@@ -46,14 +46,14 @@ custom_fonts/font = SubResource( 1 )
 text = "Prepare"
 align = 1
 
-[node name="TireBox" type="CheckBox" parent="."]
-margin_left = 52.0
-margin_top = 52.0
-margin_right = 143.0
-margin_bottom = 76.0
+[node name="healthBox" type="CheckBox" parent="."]
+margin_left = 96.0
+margin_top = 48.0
+margin_right = 232.0
+margin_bottom = 72.0
 theme = ExtResource( 8 )
 custom_styles/focus = SubResource( 8 )
-text = "Spare Tire"
+text = "Extra Health"
 
 [node name="MoneyRemaining" type="Label" parent="."]
 margin_left = 140.0
@@ -65,19 +65,19 @@ align = 2
 script = ExtResource( 2 )
 
 [node name="FuelBox" type="CheckBox" parent="."]
-margin_left = 102.0
-margin_top = 84.0
-margin_right = 218.0
-margin_bottom = 108.0
+margin_left = 96.0
+margin_top = 96.0
+margin_right = 212.0
+margin_bottom = 120.0
 theme = ExtResource( 8 )
 custom_styles/focus = SubResource( 2 )
 text = "Extra Fuel"
 
 [node name="FoodBox" type="CheckBox" parent="."]
-margin_left = 180.0
-margin_top = 52.0
-margin_right = 274.0
-margin_bottom = 76.0
+margin_left = 96.0
+margin_top = 72.0
+margin_right = 216.0
+margin_bottom = 96.0
 theme = ExtResource( 8 )
 custom_styles/focus = SubResource( 4 )
 text = "Extra Food"
@@ -113,7 +113,7 @@ theme = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 text = "Continue"
 
-[connection signal="toggled" from="TireBox" to="." method="_on_TireBox_toggled"]
+[connection signal="toggled" from="healthBox" to="." method="_on_healthBox_toggled"]
 [connection signal="toggled" from="FuelBox" to="." method="_on_FuelBox_toggled"]
 [connection signal="toggled" from="FoodBox" to="." method="_on_FoodBox_toggled"]
 [connection signal="toggled" from="CarInsBox" to="." method="_on_WaterBox_toggled"]

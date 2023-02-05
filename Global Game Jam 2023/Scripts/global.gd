@@ -10,7 +10,7 @@ var flat_repair := 100
 var arrived := true
 
 #Counters
-var damage = 0
+var health = 0
 var fuel = 0
 var food = 0
 var money = 0
