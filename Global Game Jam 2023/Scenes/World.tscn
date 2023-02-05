@@ -21,58 +21,82 @@ scale = Vector2( 2, 2 )
 z_index = -3
 texture = ExtResource( 3 )
 
-[node name="Seattle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 32 )
+[node name="Route" type="Node" parent="."]
 
-[node name="Portland" parent="." instance=ExtResource( 1 )]
-position = Vector2( 44, 64 )
+[node name="Seattle" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 88, 32 )
+
+[node name="City" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 60, 76 )
 number = 1
 
-[node name="SanFrancisco" parent="." instance=ExtResource( 1 )]
-position = Vector2( 36, 156 )
+[node name="City2" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 40, 152 )
 number = 2
 
-[node name="LosAngeles" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 196 )
+[node name="City3" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 80, 200 )
 number = 3
 
-[node name="Pheonix" parent="." instance=ExtResource( 1 )]
-position = Vector2( 148, 216 )
+[node name="City4" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 148, 212 )
 number = 4
 
-[node name="Albuquerque" parent="." instance=ExtResource( 1 )]
-position = Vector2( 204, 212 )
+[node name="City5" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 216, 164 )
 number = 5
 
-[node name="Dallas" parent="." instance=ExtResource( 1 )]
-position = Vector2( 324, 256 )
+[node name="City7" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 292, 128 )
 number = 6
 
-[node name="NewOrleans" parent="." instance=ExtResource( 1 )]
-position = Vector2( 408, 288 )
+[node name="City8" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 360, 164 )
 number = 7
 
-[node name="Atlanta" parent="." instance=ExtResource( 1 )]
-position = Vector2( 480, 224 )
+[node name="City9" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 444, 140 )
 number = 8
 
-[node name="Miami" parent="." instance=ExtResource( 1 )]
-position = Vector2( 532, 316 )
+[node name="City6" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 412, 240 )
+number = 8
+
+[node name="City10" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 524, 136 )
 number = 9
 
+[node name="City11" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 500, 264 )
+number = 9
+
+[node name="City12" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 580, 120 )
+end_city = true
+number = 10
+
+[node name="City13" parent="Route" instance=ExtResource( 1 )]
+position = Vector2( 528, 324 )
+number = 10
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
+z_index = 1
 __meta__ = {
 "_edit_lock_": true
 }
-starting_city_node = NodePath("../Seattle")
+starting_city_node = NodePath("../Route/Seattle")
 
-[connection signal="new_target_city" from="Seattle" to="Player" method="_on_Seattle_new_target_city"]
-[connection signal="new_target_city" from="Portland" to="Player" method="_on_Portland_new_target_city"]
-[connection signal="new_target_city" from="SanFrancisco" to="Player" method="_on_SanFrancisco_new_target_city"]
-[connection signal="new_target_city" from="LosAngeles" to="Player" method="_on_LosAngeles_new_target_city"]
-[connection signal="new_target_city" from="Pheonix" to="Player" method="_on_Pheonix_new_target_city"]
-[connection signal="new_target_city" from="Albuquerque" to="Player" method="_on_Albuquerque_new_target_city"]
-[connection signal="new_target_city" from="Dallas" to="Player" method="_on_Dallas_new_target_city"]
-[connection signal="new_target_city" from="NewOrleans" to="Player" method="_on_NewOrleans_new_target_city"]
-[connection signal="new_target_city" from="Atlanta" to="Player" method="_on_Atlanta_new_target_city"]
-[connection signal="new_target_city" from="Miami" to="Player" method="_on_Miami_new_target_city"]
+[connection signal="new_target_city" from="Route/Seattle" to="Player" method="_on_Seattle_new_target_city"]
+[connection signal="new_target_city" from="Route/City" to="Player" method="_on_City_new_target_city"]
+[connection signal="new_target_city" from="Route/City2" to="Player" method="_on_City2_new_target_city"]
+[connection signal="new_target_city" from="Route/City3" to="Player" method="_on_City3_new_target_city"]
+[connection signal="new_target_city" from="Route/City4" to="Player" method="_on_City4_new_target_city"]
+[connection signal="new_target_city" from="Route/City5" to="Player" method="_on_City5_new_target_city"]
+[connection signal="new_target_city" from="Route/City7" to="Player" method="_on_City7_new_target_city"]
+[connection signal="new_target_city" from="Route/City8" to="Player" method="_on_City8_new_target_city"]
+[connection signal="new_target_city" from="Route/City9" to="Player" method="_on_City9_new_target_city"]
+[connection signal="new_target_city" from="Route/City6" to="Player" method="_on_City6_new_target_city"]
+[connection signal="new_target_city" from="Route/City10" to="Player" method="_on_City10_new_target_city"]
+[connection signal="new_target_city" from="Route/City11" to="Player" method="_on_City11_new_target_city"]
+[connection signal="new_target_city" from="Route/City12" to="Player" method="_on_City12_new_target_city"]
+[connection signal="new_target_city" from="Route/City13" to="Player" method="_on_City13_new_target_city"]

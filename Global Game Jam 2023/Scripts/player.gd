@@ -67,29 +67,27 @@ func _on_City6_new_target_city():
 func _on_Seattle_new_target_city():
 	move()
 
-func _on_Portland_new_target_city():
+func _on_City7_new_target_city():
 	move()
 
-func _on_SanFrancisco_new_target_city():
+func _on_City8_new_target_city():
 	move()
 
-func _on_LosAngeles_new_target_city():
+func _on_City9_new_target_city():
 	move()
 
-func _on_Pheonix_new_target_city():
+
+func _on_City10_new_target_city():
 	move()
 
-func _on_Albuquerque_new_target_city():
+
+func _on_City11_new_target_city():
 	move()
 
-func _on_Dallas_new_target_city():
+
+func _on_City12_new_target_city():
 	move()
 
-func _on_NewOrleans_new_target_city():
-	move()
 
-func _on_Miami_new_target_city():
-	move()
-
-func _on_Atlanta_new_target_city():
+func _on_City13_new_target_city():
 	move()

@@ -3,10 +3,12 @@ class_name City
 
 signal new_target_city()
 
+export var end_city := false
+
 # variables
 export var number := 0
-export var city_name : String
-export var has_market := false
+#export var city_name : String
+#export var has_market := false
 
 # engine
 var mouse_hover := false
