@@ -21,22 +21,28 @@ func start_encounter(type : String):
 			rest_stop()
 
 func flat_tire():
+	
 	$Title.text = "Flat tire"
-	$Pay.text = str("Repair: $", Global.flat_repair)
+	$Pay.text = "Repair:\n $" + str(Global.flat_repair)
+	
 	
 	$Continue.text = str("Continue: -1 health")
+
 
 func hit_deer():
 	$Title.text = "Hit deer"
 	$Pay.text = str("Repair: $", Global.flat_repair)
+	
 
 func heavy_traffic():
 	$Title.text = "Heavy traffic"
 	$Pay.text = str("Repair: $", Global.flat_repair)
 
+
 func rest_stop():
 	$Title.text = "Rest stop"
 	$Pay.text = str("Repair: $", Global.flat_repair)
+
 
 func _on_Pay_button_up():
 	self.visible = false
