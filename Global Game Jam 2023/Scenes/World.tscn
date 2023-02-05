@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/City.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/mapbkrng.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Encounter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/roadmap.png" type="Texture" id=6]
 
 [node name="World" type="Node2D"]
 
@@ -78,6 +79,20 @@ number = 10
 [node name="City13" parent="Route" instance=ExtResource( 1 )]
 position = Vector2( 528, 324 )
 number = 10
+
+[node name="ROUTE1" type="Line2D" parent="Route"]
+z_index = -1
+points = PoolVector2Array( 88, 32, 60, 76, 41, 152, 79, 200, 147, 212, 216, 164, 292, 128, 360, 164, 411, 240, 500, 264, 528, 324 )
+width = 5.0
+texture = ExtResource( 6 )
+texture_mode = 1
+
+[node name="ROUTE2" type="Line2D" parent="Route"]
+z_index = -1
+points = PoolVector2Array( 359, 164, 444, 140, 524, 136, 580, 120 )
+width = 5.0
+texture = ExtResource( 6 )
+texture_mode = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 z_index = 1
