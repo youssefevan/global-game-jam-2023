@@ -60,4 +60,4 @@ func _on_healthBox_toggled(button_pressed):
 func _on_TextureButton_gui_input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			get_tree().change_scene("res://Scenes/TestingGrounds.tscn")
+			get_tree().change_scene("res://Scenes/World.tscn")

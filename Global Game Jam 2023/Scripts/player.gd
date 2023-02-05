@@ -40,6 +40,8 @@ func move():
 		tween.tween_property(self, "global_position", Global.target_city.global_position, travel_time)
 		call_tween = false
 
+
+# aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa :(
 func _on_City_new_target_city():
 	move()
 
@@ -56,4 +58,16 @@ func _on_City5_new_target_city():
 	move()
 
 func _on_City6_new_target_city():
+	move()
+
+func _on_Seattle_new_target_city():
+	move()
+
+func _on_Portland_new_target_city():
+	move()
+
+func _on_SanFrancisco_new_target_city():
+	move()
+
+func _on_LosAngeles_new_target_city():
 	move()
