@@ -38,4 +38,4 @@ func get_encounter():
 			1:
 				encounter.start_encounter("hit_deer")
 			2: 
-				encounter.start_encounter("heavy_traffic")
+				encounter.start_encounter("rest_stop")
