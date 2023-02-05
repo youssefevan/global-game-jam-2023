@@ -6,7 +6,7 @@ var extra_health := false
 
 func _ready():
 	Global.spare_tire = false
-	Global.money = 3
+	Global.money = 4
 	Global.fuel = 3
 	Global.food = 3
 	Global.health = 3
@@ -24,13 +24,13 @@ func _ready():
 func _on_FuelBox_toggled(button_pressed):
 	if extra_fuel == false:
 		extra_fuel = true
-		Global.fuel += 1
-		Global.money -= 3
+		Global.fuel += 2
+		Global.money -= 2
 		print(Global.fuel)
 	elif extra_fuel == true:
 		extra_fuel = false
-		Global.fuel -= 1
-		Global.money += 3
+		Global.fuel -= 2
+		Global.money += 2
 		print(Global.fuel)
 #
 #func _on_FoodBox_toggled(button_pressed):
@@ -48,13 +48,13 @@ func _on_FuelBox_toggled(button_pressed):
 func _on_healthBox_toggled(button_pressed):
 	if extra_health == false:
 		extra_health = true
-		Global.health += 1
-		Global.money -= 3
+		Global.health += 2
+		Global.money -= 2
 		print(Global.health)
 	elif extra_health == true:
 		extra_health = false
-		Global.health -= 1
-		Global.money += 3
+		Global.health -= 2
+		Global.money += 2
 		print(Global.health)
 
 func _on_TextureButton_gui_input(event):

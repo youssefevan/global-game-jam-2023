@@ -4,6 +4,7 @@ class_name City
 signal new_target_city()
 
 export var end_city := false
+export var city_name : String
 
 # variables
 export var number := 0

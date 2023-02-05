@@ -73,10 +73,13 @@ number = 9
 [node name="City12" parent="Route" instance=ExtResource( 1 )]
 position = Vector2( 580, 120 )
 end_city = true
+city_name = "NYC"
 number = 10
 
 [node name="City13" parent="Route" instance=ExtResource( 1 )]
 position = Vector2( 528, 324 )
+end_city = true
+city_name = "Miama"
 number = 10
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
