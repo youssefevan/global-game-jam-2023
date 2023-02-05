@@ -10,6 +10,7 @@ var arrived := true
 var water = 0
 var fuel = 0
 var food = 0
+var money = 0
 
 var random = RandomNumberGenerator.new()
 
