@@ -1,11 +1,14 @@
 extends Node2D
 class_name Encounter
 
+var encounter_type : String
+
 func _ready():
 	Global.encounter = self
 
 func start_encounter(type : String):
 	self.visible = true
+	encounter_type = type
 	
 	match type:
 		"flat_tire":
@@ -34,3 +37,11 @@ func heavy_traffic():
 func rest_stop():
 	$Title.text = "Rest stop"
 	$Pay/answer1.text = str("Repair: $", Global.flat_repair)
+
+func _on_Pay_button_up():
+	self.visible = false
+	Global.player.stop_for_encounter()
+
+func _on_Continue_button_up():
+	self.visible = false
+	Global.player.stop_for_encounter()

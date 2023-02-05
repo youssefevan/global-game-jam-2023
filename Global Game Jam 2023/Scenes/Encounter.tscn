@@ -79,3 +79,6 @@ margin_bottom = 26.0
 custom_fonts/font = SubResource( 2 )
 align = 1
 autowrap = true
+
+[connection signal="button_up" from="Pay" to="." method="_on_Pay_button_up"]
+[connection signal="button_up" from="Continue" to="." method="_on_Continue_button_up"]
