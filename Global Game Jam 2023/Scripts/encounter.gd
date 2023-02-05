@@ -4,5 +4,5 @@ class_name Encounter
 func _ready():
 	Global.encounter = self
 
-func start_encounter():
+func start_encounter(type : String):
 	self.visible = true
