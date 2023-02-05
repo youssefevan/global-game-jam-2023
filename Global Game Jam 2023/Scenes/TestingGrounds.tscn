@@ -45,6 +45,11 @@ number = 4
 position = Vector2( 64, 44 )
 starting_city_node = NodePath("../City")
 
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 32, 64 )
+points = PoolVector2Array( 0, 0, 64, 4, 128, 38, 192, 4 )
+width = 2.0
+
 [connection signal="new_target_city" from="City" to="Player" method="_on_City_new_target_city"]
 [connection signal="new_target_city" from="City2" to="Player" method="_on_City2_new_target_city"]
 [connection signal="new_target_city" from="City3" to="Player" method="_on_City3_new_target_city"]
