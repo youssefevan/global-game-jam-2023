@@ -50,5 +50,14 @@ func _on_Pay_button_up():
 	Global.player.pause_for_encounter()
 
 func _on_Continue_button_up():
+	if encounter_type == "flat_tire":
+		Global.health -= 1
+	
+	if encounter_type == "hit_deer":
+		Global.health -= 1
+	
+	if encounter_type == "rest_stop":
+		Global.fuel -= 1
+	
 	self.visible = false
 	Global.player.pause_for_encounter()
