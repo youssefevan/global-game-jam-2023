@@ -56,3 +56,9 @@ func _on_damageBox_toggled(button_pressed):
 		Global.damage -= 10
 		Global.money += 150
 		print(Global.damage)
+
+
+func _on_TextureButton_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			get_tree().change_scene("res://Scenes/TestingGrounds.tscn")
