@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Label.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/backgroundcounter.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/waterICON.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/damageICON.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Fonts/PixelEmulator-xq08.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Sprites/foodICON.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/FoodCount.gd" type="Script" id=6]
