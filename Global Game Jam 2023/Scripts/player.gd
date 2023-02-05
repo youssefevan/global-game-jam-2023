@@ -28,6 +28,7 @@ func _physics_process(delta):
 		call_tween = true
 
 func pause_for_encounter():
+	global_position += Vector2(1,0)
 	get_tree().paused = !get_tree().paused
 
 func move():

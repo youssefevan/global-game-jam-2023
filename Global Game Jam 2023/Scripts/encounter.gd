@@ -40,8 +40,8 @@ func rest_stop():
 
 func _on_Pay_button_up():
 	self.visible = false
-	Global.player.stop_for_encounter()
+	Global.player.pause_for_encounter()
 
 func _on_Continue_button_up():
 	self.visible = false
-	Global.player.stop_for_encounter()
+	Global.player.pause_for_encounter()
