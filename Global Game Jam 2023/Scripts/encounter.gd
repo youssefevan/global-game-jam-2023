@@ -22,17 +22,26 @@ func start_encounter(type : String):
 
 func flat_tire():
 	$Title.text = "Flat tire"
-	$Pay.text = "$" + str(Global.flat_repair)
+	if Global.money != 0:
+		$Pay.text = "$" + str(Global.flat_repair)
+	else:
+		$Pay.visible = false
 	$Continue.text = str("-1 health")
 
 func hit_deer():
 	$Title.text = "Hit deer"
-	$Pay.text = "$" + str(Global.deer_repair)
+	if Global.money != 0:
+		$Pay.text = "$" + str(Global.deer_repair)
+	else:
+		$Pay.visible = false
 	$Continue.text = str("-1 health")
 
 func rest_stop():
 	$Title.text = "Rest stop"
-	$Pay.text = "$" + str(Global.refuel)
+	if Global.money != 0:
+		$Pay.text = "$" + str(Global.refuel)
+	else:
+		$Pay.visible = false
 	$Continue.text = str("-1 fuel")
 
 
