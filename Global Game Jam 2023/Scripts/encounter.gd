@@ -1,6 +1,8 @@
 extends Node2D
 class_name Encounter
 
+var repair_cost : int
+
 var encounter_type : String
 
 func _ready():
@@ -15,36 +17,35 @@ func start_encounter(type : String):
 			flat_tire()
 		"hit_deer":
 			hit_deer()
-		"heavy_traffic":
-			heavy_traffic()
 		"rest_stop":
 			rest_stop()
 
 func flat_tire():
-	
 	$Title.text = "Flat tire"
-	$Pay.text = "Repair:\n $" + str(Global.flat_repair)
-	
-	
-	$Continue.text = str("Continue: -1 health")
-
+	$Pay.text = "$" + str(Global.flat_repair)
+	$Continue.text = str("-1 health")
 
 func hit_deer():
 	$Title.text = "Hit deer"
-	$Pay.text = str("Repair: $", Global.flat_repair)
-	
-
-func heavy_traffic():
-	$Title.text = "Heavy traffic"
-	$Pay.text = str("Repair: $", Global.flat_repair)
-
+	$Pay.text = "$" + str(Global.deer_repair)
+	$Continue.text = str("-1 health")
 
 func rest_stop():
 	$Title.text = "Rest stop"
-	$Pay.text = str("Repair: $", Global.flat_repair)
+	$Pay.text = "$" + str(Global.refuel)
+	$Continue.text = str("-1 fuel")
 
 
 func _on_Pay_button_up():
+	if encounter_type == "flat_tire":
+		Global.money -= Global.flat_repair
+	
+	if encounter_type == "hit_deer":
+		Global.money -= Global.deer_repair
+	
+	if encounter_type == "rest_stop":
+		Global.money -= Global.refuel
+	
 	self.visible = false
 	Global.player.pause_for_encounter()
 

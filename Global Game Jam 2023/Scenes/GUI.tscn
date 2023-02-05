@@ -23,7 +23,7 @@ margin_left = -60.0
 margin_bottom = 14.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 76.0
+margin_right = 60.0
 margin_bottom = 14.0
 
 [node name="Damage" type="MarginContainer" parent="HBoxContainer"]
@@ -80,14 +80,15 @@ show_behind_parent = true
 margin_right = 16.0
 margin_bottom = 8.0
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Food" type="MarginContainer" parent="HBoxContainer"]
+visible = false
 margin_left = 40.0
 margin_right = 56.0
 margin_bottom = 14.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Label" type="Label" parent="HBoxContainer/Food"]
 margin_top = 3.0
@@ -115,8 +116,8 @@ __meta__ = {
 }
 
 [node name="Fuel" type="MarginContainer" parent="HBoxContainer"]
-margin_left = 60.0
-margin_right = 76.0
+margin_left = 40.0
+margin_right = 56.0
 margin_bottom = 14.0
 
 [node name="Label" type="Label" parent="HBoxContainer/Fuel"]

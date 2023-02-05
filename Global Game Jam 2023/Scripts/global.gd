@@ -5,7 +5,9 @@ var target_city : City
 var current_city : City
 var encounter : Encounter
 
-var flat_repair := 100
+var flat_repair := 1
+var deer_repair := 1
+var refuel := 1
 
 var arrived := true
 
@@ -29,7 +31,7 @@ func get_encounter():
 		pass
 	else:
 		player.pause_for_encounter()
-		var which_encounter = random.randi() % 4
+		var which_encounter = random.randi() % 3
 		match which_encounter:
 			0:
 				encounter.start_encounter("flat_tire")
@@ -37,5 +39,3 @@ func get_encounter():
 				encounter.start_encounter("hit_deer")
 			2: 
 				encounter.start_encounter("heavy_traffic")
-			3:
-				encounter.start_encounter("rest_stop")

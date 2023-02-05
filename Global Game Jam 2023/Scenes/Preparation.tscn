@@ -46,15 +46,6 @@ custom_fonts/font = SubResource( 1 )
 text = "Prepare"
 align = 1
 
-[node name="healthBox" type="CheckBox" parent="."]
-margin_left = 96.0
-margin_top = 48.0
-margin_right = 232.0
-margin_bottom = 72.0
-theme = ExtResource( 8 )
-custom_styles/focus = SubResource( 8 )
-text = "Extra Health"
-
 [node name="MoneyRemaining" type="Label" parent="."]
 margin_left = 140.0
 margin_top = 122.0
@@ -64,30 +55,43 @@ theme = ExtResource( 4 )
 align = 2
 script = ExtResource( 2 )
 
+[node name="healthBox" type="CheckBox" parent="."]
+margin_left = 96.0
+margin_top = 60.0
+margin_right = 232.0
+margin_bottom = 84.0
+theme = ExtResource( 8 )
+custom_styles/focus = SubResource( 8 )
+text = "Extra Health"
+
 [node name="FuelBox" type="CheckBox" parent="."]
 margin_left = 96.0
-margin_top = 96.0
+margin_top = 84.0
 margin_right = 212.0
-margin_bottom = 120.0
+margin_bottom = 108.0
 theme = ExtResource( 8 )
 custom_styles/focus = SubResource( 2 )
 text = "Extra Fuel"
 
 [node name="FoodBox" type="CheckBox" parent="."]
-margin_left = 96.0
-margin_top = 72.0
-margin_right = 216.0
-margin_bottom = 96.0
+visible = false
+margin_left = 4.0
+margin_top = 188.0
+margin_right = 124.0
+margin_bottom = 212.0
 theme = ExtResource( 8 )
 custom_styles/focus = SubResource( 4 )
 text = "Extra Food"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CarInsBox" type="CheckBox" parent="."]
 visible = false
-margin_left = 180.0
-margin_top = 84.0
-margin_right = 281.0
-margin_bottom = 108.0
+margin_left = 192.0
+margin_top = 196.0
+margin_right = 293.0
+margin_bottom = 220.0
 theme = ExtResource( 4 )
 custom_styles/focus = SubResource( 5 )
 __meta__ = {
