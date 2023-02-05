@@ -1,8 +1,23 @@
-[gd_resource type="Theme" load_steps=5 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://Sprites/window2check.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/window2checkACTIVE.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Fonts/PixelEmulator-xq08.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/window2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/window2hover.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/window2click.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 64, 32 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 64, 32 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -10,5 +25,8 @@ font_data = ExtResource( 3 )
 
 [resource]
 default_font = SubResource( 1 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 4 )
 CheckBox/icons/checked = ExtResource( 2 )
 CheckBox/icons/unchecked = ExtResource( 1 )
