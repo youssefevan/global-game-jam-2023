@@ -15,7 +15,7 @@ var arrived := true
 var health = 3
 var fuel = 3
 var food = 0
-var money = 8
+var money = 3
 
 var spare_tire := false
 
@@ -31,7 +31,7 @@ func get_encounter():
 	random.randomize()
 	var enable_encounter = random.randi() % 3
 	
-	if enable_encounter != 0:
+	if enable_encounter == 0:
 		pass
 	else:
 		player.pause_for_encounter()

@@ -84,3 +84,12 @@ func _on_Albuquerque_new_target_city():
 
 func _on_Dallas_new_target_city():
 	move()
+
+func _on_NewOrleans_new_target_city():
+	move()
+
+func _on_Miami_new_target_city():
+	move()
+
+func _on_Atlanta_new_target_city():
+	move()
