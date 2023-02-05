@@ -8,7 +8,7 @@ var encounter : Encounter
 var arrived := true
 
 #Counters
-var water = 0
+var damage = 0
 var fuel = 0
 var food = 0
 var money = 0
