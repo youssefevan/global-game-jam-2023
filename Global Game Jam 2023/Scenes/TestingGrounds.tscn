@@ -31,8 +31,8 @@ position = Vector2( 64, 44 )
 starting_city_node = NodePath("../City")
 
 [node name="GUI" parent="." instance=ExtResource( 3 )]
-margin_left = 260.0
-margin_right = 320.0
+margin_left = 240.0
+margin_right = 316.0
 
 [node name="Encounter" parent="." instance=ExtResource( 4 )]
 visible = false

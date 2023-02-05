@@ -1,4 +1,4 @@
 extends Label
 
 func _ready():
-	self.text = str(Global.water) + " "
+	self.text = str(Global.money) + " "
