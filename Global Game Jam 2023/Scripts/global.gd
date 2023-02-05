@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 func get_encounter():
 	random.randomize()
-	var enable_encounter = random.randi() % 2
+	var enable_encounter = random.randi() % 3
 	
 	if enable_encounter != 0:
 		pass

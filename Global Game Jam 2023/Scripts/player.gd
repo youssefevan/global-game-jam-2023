@@ -4,6 +4,8 @@ class_name Player
 export var starting_city_node: NodePath
 onready var starting_city : City = get_node(starting_city_node)
 
+var had_encounter := false
+
 var call_tween := true
 var travel_time := 0.0
 var city_distance := 0.0
@@ -15,8 +17,9 @@ func _ready():
 
 func _physics_process(delta):
 	if Global.target_city != null:
-		if  int(self.global_position.distance_to(Global.target_city.global_position)) == int(city_distance/2):
+		if  int(self.global_position.distance_to(Global.target_city.global_position)) == int(city_distance/2) and had_encounter == false:
 			Global.get_encounter()
+			had_encounter = true
 		
 		if self.global_position == Global.target_city.global_position:
 			Global.arrived = true
@@ -26,9 +29,10 @@ func _physics_process(delta):
 	
 	if Global.arrived:
 		call_tween = true
+		had_encounter = false
 
 func pause_for_encounter():
-	global_position += Vector2(1,0)
+	#global_position += Vector2(1,1)
 	get_tree().paused = !get_tree().paused
 
 func move():
@@ -70,4 +74,13 @@ func _on_SanFrancisco_new_target_city():
 	move()
 
 func _on_LosAngeles_new_target_city():
+	move()
+
+func _on_Pheonix_new_target_city():
+	move()
+
+func _on_Albuquerque_new_target_city():
+	move()
+
+func _on_Dallas_new_target_city():
 	move()

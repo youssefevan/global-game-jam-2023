@@ -36,6 +36,18 @@ number = 2
 position = Vector2( 64, 196 )
 number = 3
 
+[node name="Pheonix" parent="." instance=ExtResource( 1 )]
+position = Vector2( 148, 216 )
+number = 4
+
+[node name="Albuquerque" parent="." instance=ExtResource( 1 )]
+position = Vector2( 204, 212 )
+number = 5
+
+[node name="Dallas" parent="." instance=ExtResource( 1 )]
+position = Vector2( 324, 256 )
+number = 6
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 __meta__ = {
 "_edit_lock_": true
@@ -46,3 +58,6 @@ starting_city_node = NodePath("../Seattle")
 [connection signal="new_target_city" from="Portland" to="Player" method="_on_Portland_new_target_city"]
 [connection signal="new_target_city" from="SanFrancisco" to="Player" method="_on_SanFrancisco_new_target_city"]
 [connection signal="new_target_city" from="LosAngeles" to="Player" method="_on_LosAngeles_new_target_city"]
+[connection signal="new_target_city" from="Pheonix" to="Player" method="_on_Pheonix_new_target_city"]
+[connection signal="new_target_city" from="Albuquerque" to="Player" method="_on_Albuquerque_new_target_city"]
+[connection signal="new_target_city" from="Dallas" to="Player" method="_on_Dallas_new_target_city"]
