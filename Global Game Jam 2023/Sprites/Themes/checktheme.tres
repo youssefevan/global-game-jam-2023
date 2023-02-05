@@ -8,7 +8,7 @@
 [ext_resource path="res://Sprites/window2click.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 8
+size = 10
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxTexture" id=3]
