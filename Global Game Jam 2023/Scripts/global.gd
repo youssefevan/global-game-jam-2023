@@ -5,6 +5,8 @@ var target_city : City
 var current_city : City
 var encounter : Encounter
 
+var flat_repair := 100
+
 var arrived := true
 
 #Counters
