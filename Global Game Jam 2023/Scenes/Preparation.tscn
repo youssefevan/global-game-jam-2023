@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/preparation.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/money_remaining.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Fonts/PixelEmulator-xq08.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
 
 [node name="Preparation" type="Node2D"]
 script = ExtResource( 1 )
@@ -19,6 +23,7 @@ margin_left = 128.0
 margin_top = 20.0
 margin_right = 192.0
 margin_bottom = 34.0
+custom_fonts/font = SubResource( 1 )
 text = "Prepare"
 align = 1
 

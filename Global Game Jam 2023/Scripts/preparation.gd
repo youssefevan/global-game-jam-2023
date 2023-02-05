@@ -2,14 +2,14 @@ extends Node2D
 
 var extra_fuel := false
 var extra_food := false
-var extra_water := false
+var extra_damage := false
 
 func _ready():
 	Global.spare_tire = false
 	Global.money = 500
 	Global.fuel = 30
 	Global.food = 30
-	Global.water = 30
+	Global.damage = 30
 
 func _on_TireBox_toggled(button_pressed):
 	if Global.spare_tire == false:
@@ -45,14 +45,14 @@ func _on_FoodBox_toggled(button_pressed):
 		extra_food = false
 		print(Global.food)
 
-func _on_WaterBox_toggled(button_pressed):
-	if extra_water == false:
-		extra_water = true
-		Global.water += 10
+func _on_damageBox_toggled(button_pressed):
+	if extra_damage == false:
+		extra_damage = true
+		Global.damage += 10
 		Global.money -= 150
-		print(Global.water)
-	elif extra_water == true:
-		extra_water = false
-		Global.water -= 10
+		print(Global.damage)
+	elif extra_damage == true:
+		extra_damage = false
+		Global.damage -= 10
 		Global.money += 150
-		print(Global.water)
+		print(Global.damage)
