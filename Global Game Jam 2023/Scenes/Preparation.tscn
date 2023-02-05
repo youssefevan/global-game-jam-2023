@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/preparation.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/money_remaining.gd" type="Script" id=2]
 
 [node name="Preparation" type="Node2D"]
 script = ExtResource( 1 )
@@ -15,41 +16,48 @@ __meta__ = {
 
 [node name="Title" type="Label" parent="."]
 margin_left = 128.0
-margin_top = 24.0
+margin_top = 20.0
 margin_right = 192.0
-margin_bottom = 38.0
+margin_bottom = 34.0
 text = "Prepare"
 align = 1
 
 [node name="TireBox" type="CheckBox" parent="."]
-margin_left = 68.0
+margin_left = 52.0
 margin_top = 52.0
-margin_right = 159.0
+margin_right = 143.0
 margin_bottom = 76.0
 text = "Spare Tire"
 
+[node name="MoneyRemaining" type="Label" parent="."]
+margin_left = 140.0
+margin_top = 144.0
+margin_right = 180.0
+margin_bottom = 158.0
+align = 2
+script = ExtResource( 2 )
+
 [node name="FuelBox" type="CheckBox" parent="."]
-margin_left = 68.0
+margin_left = 52.0
 margin_top = 84.0
-margin_right = 159.0
+margin_right = 143.0
 margin_bottom = 108.0
 text = "Extra Fuel"
 
 [node name="FoodBox" type="CheckBox" parent="."]
-margin_left = 164.0
+margin_left = 180.0
 margin_top = 52.0
-margin_right = 255.0
+margin_right = 274.0
 margin_bottom = 76.0
 text = "Extra Food"
 
 [node name="WaterBox" type="CheckBox" parent="."]
-margin_left = 164.0
+margin_left = 180.0
 margin_top = 84.0
-margin_right = 258.0
+margin_right = 281.0
 margin_bottom = 108.0
 text = "Extra Water"
 
-[connection signal="button_up" from="TireBox" to="." method="_on_TireBox_button_up"]
 [connection signal="toggled" from="TireBox" to="." method="_on_TireBox_toggled"]
 [connection signal="toggled" from="FuelBox" to="." method="_on_FuelBox_toggled"]
 [connection signal="toggled" from="FoodBox" to="." method="_on_FoodBox_toggled"]

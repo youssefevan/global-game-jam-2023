@@ -12,6 +12,8 @@ var fuel = 0
 var food = 0
 var money = 0
 
+var spare_tire := false
+
 var random = RandomNumberGenerator.new()
 
 onready var player : Player
