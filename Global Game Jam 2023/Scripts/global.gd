@@ -5,6 +5,12 @@ var target_city : City
 var current_city : City
 
 var arrived := true
+
+#Counters
+var water = 0
+var fuel = 0
+var food = 0
+
 var random = RandomNumberGenerator.new()
 
 onready var player : Player
