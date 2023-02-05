@@ -3,6 +3,7 @@ extends Node
 var selected_city : City
 var target_city : City
 var current_city : City
+var encounter : Encounter
 
 var arrived := true
 
@@ -29,34 +30,10 @@ func get_encounter():
 		var which_encounter = random.randi() % 4
 		match which_encounter:
 			0:
-				flat_tire()
+				encounter.start_encounter("flat_tire")
 			1:
-				hit_deer()
+				encounter.start_encounter("hit_deer")
 			2: 
-				heavy_traffic()
+				encounter.start_encounter("heavy_traffic")
 			3:
-				rest_stop()
-
-func flat_tire():
-	print("flat tire")
-	yield(get_tree().create_timer(1), "timeout")
-	player.pause_for_encounter()
-	print("unpause")
-
-func hit_deer():
-	print("hit deer")
-	yield(get_tree().create_timer(1), "timeout")
-	player.pause_for_encounter()
-	print("unpause")
-
-func heavy_traffic():
-	print("heavy traffic")
-	yield(get_tree().create_timer(1), "timeout")
-	player.pause_for_encounter()
-	print("unpause")
-
-func rest_stop():
-	print("rest stop")
-	yield(get_tree().create_timer(1), "timeout")
-	player.pause_for_encounter()
-	print("unpause")
+				encounter.start_encounter("rest_stop")
