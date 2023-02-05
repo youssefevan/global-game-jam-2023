@@ -38,8 +38,31 @@ theme = SubResource( 1 )
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Label" type="Label" parent="TextureButton"]
+[node name="answer1" type="Label" parent="TextureButton"]
+margin_left = 10.0
+margin_top = 6.0
+margin_right = 54.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 2 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 168.0
+margin_top = 104.0
+margin_right = 232.0
+margin_bottom = 136.0
+theme = SubResource( 1 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="answer2" type="Label" parent="TextureButton2"]
 margin_left = 10.0
 margin_top = 6.0
 margin_right = 54.0
