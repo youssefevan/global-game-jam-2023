@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/window2check.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/window2checkACTIVE.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Fonts/PixelEmulator-xq08.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 3 )
+
+[resource]
+default_font = SubResource( 1 )
+CheckBox/icons/checked = ExtResource( 2 )
+CheckBox/icons/unchecked = ExtResource( 1 )
