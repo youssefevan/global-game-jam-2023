@@ -1,17 +1,23 @@
 extends KinematicBody2D
+class_name Player
 
 export var starting_city_node: NodePath
 onready var starting_city : City = get_node(starting_city_node)
 
 var call_tween := true
 var travel_time := 0.0
+var city_distance := 0.0
 
 func _ready():
+	Global.player = self
 	self.global_position = starting_city.global_position
 	Global.current_city = starting_city
 
 func _physics_process(delta):
 	if Global.target_city != null:
+		if  int(self.global_position.distance_to(Global.target_city.global_position)) == int(city_distance/2):
+			Global.get_encounter()
+		
 		if self.global_position == Global.target_city.global_position:
 			Global.arrived = true
 			Global.current_city = Global.target_city
@@ -21,9 +27,14 @@ func _physics_process(delta):
 	if Global.arrived:
 		call_tween = true
 
+func pause_for_encounter():
+	get_tree().paused = !get_tree().paused
+
 func move():
 	if call_tween == true:
-		travel_time = self.global_position.distance_to(Global.target_city.global_position)/100
+		city_distance = self.global_position.distance_to(Global.target_city.global_position)
+		travel_time = city_distance/50
+		#print(travel_time)
 		var tween = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 		tween.tween_property(self, "global_position", Global.target_city.global_position, travel_time)
 		call_tween = false
