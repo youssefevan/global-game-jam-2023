@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/preparation.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/money_remaining.gd" type="Script" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Sprites/Themes/prepscreentheme.tres" type="Theme" id=8]
 
 [sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 14
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=8]
@@ -47,12 +51,13 @@ text = "Prepare"
 align = 1
 
 [node name="MoneyRemaining" type="Label" parent="."]
-margin_left = 140.0
+margin_left = 124.0
 margin_top = 122.0
-margin_right = 180.0
-margin_bottom = 137.0
+margin_right = 196.0
+margin_bottom = 142.0
 theme = ExtResource( 4 )
-align = 2
+custom_fonts/font = SubResource( 9 )
+align = 1
 script = ExtResource( 2 )
 
 [node name="healthBox" type="CheckBox" parent="."]
