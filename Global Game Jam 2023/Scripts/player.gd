@@ -14,8 +14,17 @@ func _ready():
 	Global.player = self
 	self.global_position = starting_city.global_position
 	Global.current_city = starting_city
+	Global.target_city = null
+	Global.arrived = true
 
 func _physics_process(delta):
+	if Global.current_city.end_city == true:
+		if Global.current_city.city_name == "NYC":
+			Global.current_end_city == "NYC"
+		elif Global.current_city.city_name == "Miami":
+			Global.current_end_city == "Miami"
+		get_tree().change_scene("res://Scenes/WinScreen.tscn")
+	
 	if Global.target_city != null:
 		if  int(self.global_position.distance_to(Global.target_city.global_position)) == int(city_distance/2) and had_encounter == false:
 			Global.get_encounter()

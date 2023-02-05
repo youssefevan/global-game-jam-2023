@@ -23,6 +23,8 @@ var random = RandomNumberGenerator.new()
 
 onready var player : Player
 
+var current_end_city : String
+
 func _physics_process(delta):
 	if health == 0 || fuel == 0:
 		get_tree().change_scene("res://Scenes/GameOver.tscn")

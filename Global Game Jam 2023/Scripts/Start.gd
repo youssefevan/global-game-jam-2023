@@ -12,4 +12,4 @@ func _on_Start_mouse_exited():
 func _on_Start_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			get_tree().change_scene("res://Scenes/TestingGrounds.tscn")
+			get_tree().change_scene("res://Scenes/Preparation.tscn")
